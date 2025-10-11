@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rishabh Prakash — Software Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Rishabh Prakash — Software Developer, Angular & Azure AI Search specialist." />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071021 0%, #071a28 60%); color:#e6eef6}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+     .logo img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:36px 0}
+    .intro h1{margin:0;font-size:34px}
+    .intro p.lead{color:var(--muted);margin-top:8px;line-height:1.5}
+    .cta{margin-top:18px}
+    .btn{background:transparent;border:1px solid var(--accent);padding:10px 14px;border-radius:10px;color:var(--accent);cursor:pointer;font-weight:700}
+    .profile-card{background:linear-gradient(180deg,var(--glass),transparent);padding:20px;border-radius:14px;backdrop-filter: blur(6px);box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .profile-card img{width:100%;border-radius:8px;display:block}
+    section{margin-top:28px}
+    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:24px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    h2{margin:0 0 12px 0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass-2);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px}
+    .timeline{list-style:none;padding:0;margin:0}
+    .timeline li{padding:14px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    .project{display:flex;gap:14px;align-items:flex-start}
+    .project img{width:120px;height:80px;border-radius:8px;object-fit:cover}
+    footer{margin:40px 0;padding:24px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero,.grid-2{grid-template-columns:1fr}
+      .profile-card{order:-1}
+      nav{display:none}
+    }
+    /* light-mode toggle (simple) */
+    .light{--bg:#f7fbff;--card:#ffffff;--muted:#445566;--accent:#0ea5a3;--glass:rgba(2,6,23,0.02);--glass-2:rgba(2,6,23,0.01);color-scheme:light}
+    /* small helpers */
+    .meta{color:var(--muted);font-size:13px}
+    .link{color:var(--accent);text-decoration:none;font-weight:700}
+    .icon{display:inline-block;width:18px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(0,0,0,0.18);font-weight:700}
+    .toggle-wrap{display:flex;gap:8px;align-items:center}
+  </style>
+</head>
+<body id="page">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RP</div>
+        <div>
+          <div style="font-weight:800">Rishabh Prakash</div>
+          <div class="meta">Software Developer • AI Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="toggle-wrap">
+        <button id="themeBtn" class="btn">Toggle Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="intro">
+          <h1>Hi — I'm <span style="color:var(--accent)">Rishabh</span>, a Software Developer focused on Front-end, Back-end & AI-Technolgies</h1>
+          <p class="lead">I build responsive single-page applications and AI-driven knowledge experiences using Angular, NodeJS and Azure AI Search. Experienced with full SDLC, performance optimization, and scalable architecture.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">View projects</a>
+            <button class="btn" onclick="scrollToContact()">Contact</button>
+          </div>
+          <div style="margin-top:14px;color:var(--muted);font-size:13px">
+            <span class="badge">MCA — NIT Calicut</span>
+            <span style="margin-left:8px" class="badge">Azure AI Engineer Associate</span>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <img src="rishabh_profile_pic_1_14245777.png" alt="Profile photo"/>
+          <div style="margin-top:12px">
+            <div style="font-weight:800">Rishabh Prakash</div>
+            <div class="meta">Gurgaon, India • Languages: English, Hindi</div>
+            <div style="margin-top:8px;display:flex;gap:8px"><a class="link" href="https://linkedin.com/in/rishabh-prakash-76636aa6" target="_blank">LinkedIn</a><a class="link" href="#contact">Contact</a></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="grid-2">
+        <div>
+          <div class="card">
+            <h2>About me</h2>
+            <p class="meta">Results-oriented Software Developer with a strong focus on front-end and back-end technologies. I enjoy building performant Angular apps and creating AI-powered search & knowledge experiences.</p>
+            <ul style="margin-top:12px;color:var(--muted);line-height:1.6">
+              <li>Proficient across SDLC — requirements, design, coding, testing, deployment.</li>
+              <li>Experience integrating Azure Cognitive Search with indexers and AI enrichment.</li>
+              <li>Passionate about performance, reusable components, and clean architecture.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:16px">
+            <h2>Core strengths</h2>
+            <div class="skills" style="margin-top:10px">
+              <span class="chip">Angular 14+</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Azure AI Search</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">HTML / CSS / SASS</span>
+              <span class="chip">Highcharts</span>
+              <span class="chip">AWS Lambda</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">React</span>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" style="margin-top:16px">
+            <h2>Certifications</h2>
+            <ul style="color:var(--muted);line-height:1.6;margin:10px 0 0 0;padding-left:18px">
+              <li>Azure AI Engineer Associate</li>
+              <li>Azure Cloud Fundamentals</li>
+              <li>Mean Stack (Udemy)</li>
+              <li>MongoDB Basics</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section id="skills">
+        <h2>Technical skills</h2>
+        <div class="card" style="margin-top:12px">
+          <div class="skills">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Angular</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">React (learning)</span>
+            <span class="chip">NodeJS</span>
+            <span class="chip">REST / GraphQL</span>
+            <span class="chip">HTML / CSS / SASS</span>
+            <span class="chip">Azure AI</span>
+            <span class="chip">Azure OpenAI</span>
+            <span class="chip">AWS Lambda</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Highcharts</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="card" style="margin-top:12px">
+          <ul class="timeline">
+            <li>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:800">Infosys Limited — Specialist Programmer</div>
+                  <div class="meta">Nov 2023 — Present | Gurgaon</div>
+                </div>
+                <div class="meta">AI Knowledge Management</div>
+              </div>
+              <div style="margin-top:8px;color:var(--muted)">
+                Worked on an AI-powered knowledge management chat agent; integrated Azure Cognitive Search with indexers and skillsets, built semantic hybrid search and AI enrichment pipelines, and engineered scalable Angular web apps.
+              </div>
+            </li>
+
+            <li>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:800">Quantiphi Analytics — Software Developer</div>
+                  <div class="meta">Aug 2021 — Nov 2023 | Bangalore</div>
+                </div>
+                <div class="meta">Angular & NodeJS</div>
+              </div>
+              <div style="margin-top:8px;color:var(--muted)">Designed and developed websites & components using Angular 14+, NodeJS and MongoDB. Mentored 20+ new team members and maintained high code quality in Agile environments.</div>
+            </li>
+
+            <li>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:800">FreeElective Network — Software Developer & Intern</div>
+                  <div class="meta">Jun 2019 — Jul 2021</div>
+                </div>
+                <div class="meta">MEAN Stack</div>
+              </div>
+              <div style="margin-top:8px;color:var(--muted)">Built admin CRM modules, upgraded Angular versions, and wrote NodeJS back-end APIs with Neo4j & MongoDB.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected projects</h2>
+        <div class="card" style="margin-top:12px">
+
+          <div class="project" style="margin-bottom:12px">
+            <img src="https://via.placeholder.com/320x200.png?text=Azure+AI+Search" alt="Azure AI Search project"/>
+            <div>
+              <div style="font-weight:800">AI Knowledge Management Chat Agent</div>
+              <div class="meta">Infosys — Angular, Azure Cognitive Search, Azure OpenAI</div>
+              <p style="color:var(--muted);margin-top:8px">Built a knowledge agent that uses Azure Cognitive Search (indexers, skillsets) and semantic hybrid search to provide context-aware document retrieval and natural language answers. Implemented AI enrichment pipelines and real-time sync between document sources and indexes.</p>
+              <div style="margin-top:8px"><a class="link" href="#" onclick="alert('Add project link or repo here')">View case study</a></div>
+            </div>
+          </div>
+
+          <div class="project" style="margin-bottom:12px">
+            <img src="https://via.placeholder.com/320x200.png?text=Angular+Web+App" alt="Angular web app"/>
+            <div>
+              <div style="font-weight:800">Enterprise Angular Web Apps</div>
+              <div class="meta">Quantiphi — Angular 14+, NodeJS</div>
+              <p style="color:var(--muted);margin-top:8px">Designed and developed responsive Angular components, optimized for performance and maintainability. Led upgrading efforts and mentored junior devs.</p>
+              <div style="margin-top:8px"><a class="link" href="#" onclick="alert('Add project link or repo here')">View repo</a></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>Awards & accolades</h2>
+        <div class="card" style="margin-top:12px">
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Rookie of the Quarter — Infosys (Oct 2024)</li>
+            <li>Synergetic Perfection — Quantiphi (May 2023)</li>
+            <li>Justice League Award — Quantiphi (Jun 2022)</li>
+            <li>Think Tanker — FreeElective (Jan 2020)</li>
+          </ul>
+        </div>
+      </section>
+
+ <section id="contact">
+  <h2>Get in touch</h2>
+  <div class="card" style="margin-top:12px">
+    <p class="meta">I'm open to opportunities and collaborations. Feel free to reach out via LinkedIn, email, or phone.</p>
+    
+    <div class="contact-grid" style="margin-top:10px">
+      <div>
+        <div class="meta">Phone</div>
+        <div style="font-weight:700">+91-9031981371</div>
+      </div>
+      <div>
+        <div class="meta">Email</div>
+        <div style="font-weight:700"><a id="emailLink" class="link" href="#">rishabh.prakash42@gmail.com</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <div class="meta">Location</div>
+      <div>Gurgaon, Haryana, India</div>
+    </div>
+    <div style="margin-top:12px">
+      <a class="btn" href="https://linkedin.com/in/rishabh-prakash-76636aa6" target="_blank">LinkedIn</a>
+      <a class="btn" style="margin-left:8px" href="#" onclick="copyEmail()">Copy Email</a>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© <strong>Rishabh Prakash</strong> — Software Developer • AI Enthusiast</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle (light/dark)
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', ()=>{
+      document.documentElement.classList.toggle('light');
+      themeBtn.textContent = document.documentElement.classList.contains('light') ? 'Toggle Dark' : 'Toggle Light';
+    });
+
+    function scrollToContact(){document.querySelector('#contact').scrollIntoView({behavior:'smooth'})}
+
+    // Obfuscated email reveal + copy
+    const emailLink = document.getElementById('emailLink');
+    const realEmail = 'rishabh.prakash42@gmail.com';
+    emailLink.addEventListener('click', (e)=>{
+      e.preventDefault();
+      navigator.clipboard && navigator.clipboard.writeText(realEmail).then(()=>{
+        alert('Email copied to clipboard: ' + realEmail);
+      }).catch(()=>{
+        prompt('Email:', realEmail);
+      });
+    });
+
+    function copyEmail(){
+      navigator.clipboard && navigator.clipboard.writeText(realEmail).then(()=>{
+        alert('Email copied: ' + realEmail);
+      }).catch(()=>{prompt('Email', realEmail)})
+    }
+  </script>
+</body>
+</html>
